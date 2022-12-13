@@ -17,6 +17,7 @@ function CharacterList(props) {
         <CharacterItem key={character.id} character={character}></CharacterItem>
       );
     });
+
   return renderList.length !== 0 ? (
     <ul>{renderList}</ul>
   ) : (
