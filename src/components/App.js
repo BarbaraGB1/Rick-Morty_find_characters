@@ -1,11 +1,13 @@
 import { Route, Routes } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Api from "../services/Api";
-import "../styles/App.scss";
 import CharacterList from "./CharacterList";
 import Filter from "./Filter";
 import CharacterDetail from "./CharacterDetail";
+import Header from "./Header";
+import Footer from "./Footer";
 import ls from "../services/LocalStorage";
+import "../styles/App.scss";
 
 function App() {
   const [apiList, setApiList] = useState([]);
@@ -30,32 +32,45 @@ function App() {
   };
   return (
     <div className="container">
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Filter
-                handleName={handleName}
-                filteredName={filteredName}
-                handleStatus={handleStatus}
-                filteredStatus={filteredStatus}
-              ></Filter>
-              <CharacterList
-                apiList={apiList}
-                filteredName={filteredName}
-                filteredStatus={filteredStatus}
-              ></CharacterList>
-            </>
-          }
-        ></Route>
-        <Route
-          path="/character/:characterId"
-          element={
-            <CharacterDetail findCharacter={findCharacter}></CharacterDetail>
-          }
-        ></Route>
-      </Routes>
+      <Header></Header>
+      <main className="main">
+        <div class="light x1"></div>
+        <div class="light x2"></div>
+        <div class="light x3"></div>
+        <div class="light x4"></div>
+        <div class="light x5"></div>
+        <div class="light x6"></div>
+        <div class="light x7"></div>
+        <div class="light x8"></div>
+        <div class="light x9"></div>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Filter
+                  handleName={handleName}
+                  filteredName={filteredName}
+                  handleStatus={handleStatus}
+                  filteredStatus={filteredStatus}
+                ></Filter>
+                <CharacterList
+                  apiList={apiList}
+                  filteredName={filteredName}
+                  filteredStatus={filteredStatus}
+                ></CharacterList>
+              </>
+            }
+          ></Route>
+          <Route
+            path="/character/:characterId"
+            element={
+              <CharacterDetail findCharacter={findCharacter}></CharacterDetail>
+            }
+          ></Route>
+        </Routes>
+      </main>
+      <Footer></Footer>
     </div>
   );
 }

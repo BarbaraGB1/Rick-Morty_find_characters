@@ -1,0 +1,14 @@
+.header {
+  height: 250px;
+  background-image: url(../../images/4ea7fb833c63a4ea0b0fb696c5919dd7.png);
+  background-size: 450px 250px;
+  background-position: center;
+  position: relative;
+}
+.logo {
+  width: 200px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -125%);
+}

@@ -1,4 +1,5 @@
 import CharacterItem from "./CharacterItem";
+import "../styles/Partials/CharacterList.scss";
 
 function CharacterList(props) {
   const renderList = props.apiList
@@ -19,7 +20,7 @@ function CharacterList(props) {
     });
 
   return renderList.length !== 0 ? (
-    <ul>{renderList}</ul>
+    <ul className="ulList">{renderList}</ul>
   ) : (
     <p>No hay ningún personaje que se llame {props.filteredName}</p>
   );

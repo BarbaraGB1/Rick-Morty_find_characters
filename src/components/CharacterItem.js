@@ -1,13 +1,23 @@
 import { Link } from "react-router-dom";
+import "../styles/Partials/CharacterItem.scss";
 function CharacterItem({ character }) {
   return (
-    <li>
-      <Link to={`/character/${character.id}`}>
-        <article>
-          <img src={character.image} alt={character.name} />
-          <h2>{character.name}</h2>
-          <h3>Especie: {character.species}</h3>
-        </article>
+    <li className="list">
+      <Link to={`/character/${character.id}`} className="link">
+        <div className="fadeOut grow">
+          <article className="article">
+            <img
+              className="imgList"
+              src={character.image}
+              alt={character.name}
+            />
+
+            <div className="text ">
+              <h2 className="name">{character.name}</h2>
+              <h3> {character.species}</h3>
+            </div>
+          </article>
+        </div>
       </Link>
     </li>
   );
