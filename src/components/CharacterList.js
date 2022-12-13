@@ -7,6 +7,11 @@ function CharacterList(props) {
         .toLowerCase()
         .includes(props.filteredName.toLowerCase());
     })
+    .filter(
+      (character) =>
+        props.filteredStatus === "" || character.status === props.filteredStatus
+    )
+
     .map((character) => {
       return (
         <CharacterItem key={character.id} character={character}></CharacterItem>

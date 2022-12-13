@@ -1,5 +1,5 @@
 import FilterName from "./FilterName";
-
+import FilterStatus from "./FilterStatus";
 const Filter = (props) => {
   const handlesubmit = (event) => {
     event.preventDefault();
@@ -8,9 +8,13 @@ const Filter = (props) => {
     <>
       <form onSubmit={handlesubmit}>
         <FilterName
-          handleValue={props.handleValue}
+          handleName={props.handleName}
           filteredName={props.filteredName}
         ></FilterName>
+        <FilterStatus
+          handleStatus={props.handleStatus}
+          filteredStatus={props.filteredStatus}
+        ></FilterStatus>
       </form>
     </>
   );

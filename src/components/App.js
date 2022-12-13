@@ -10,6 +10,7 @@ import ls from "../services/LocalStorage";
 function App() {
   const [apiList, setApiList] = useState([]);
   const [filteredName, setFilteredName] = useState(ls.get("search", ""));
+  const [filteredStatus, setFilteredStatus] = useState("");
 
   useEffect(() => {
     Api().then((data) => {
@@ -17,9 +18,12 @@ function App() {
     });
   }, []);
 
-  const handleValue = (value) => {
+  const handleName = (value) => {
     setFilteredName(value);
     ls.set("search", filteredName);
+  };
+  const handleStatus = (value) => {
+    setFilteredStatus(value);
   };
   const findCharacter = (id) => {
     return apiList.find((oneMovie) => oneMovie.id === parseInt(id));
@@ -32,12 +36,15 @@ function App() {
           element={
             <>
               <Filter
-                handleValue={handleValue}
+                handleName={handleName}
                 filteredName={filteredName}
+                handleStatus={handleStatus}
+                filteredStatus={filteredStatus}
               ></Filter>
               <CharacterList
                 apiList={apiList}
                 filteredName={filteredName}
+                filteredStatus={filteredStatus}
               ></CharacterList>
             </>
           }

@@ -1,6 +1,6 @@
 function FilterName(props) {
-  const handlechange = (ev) => {
-    props.handleValue(ev.target.value);
+  const handlechangeName = (ev) => {
+    props.handleName(ev.target.value);
   };
   return (
     <>
@@ -11,7 +11,7 @@ function FilterName(props) {
           placeholder="Ejemplo:Morty Smith"
           id="name"
           name="name"
-          onChange={handlechange}
+          onChange={handlechangeName}
           value={props.filteredName}
         />
       </label>
