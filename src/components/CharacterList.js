@@ -3,13 +3,19 @@ import CharacterItem from "./CharacterItem";
 function CharacterList(props) {
   const renderList = props.apiList
     .filter((character) => {
-      return character.name.toLowerCase().includes(props.filteredName);
+      return character.name
+        .toLowerCase()
+        .includes(props.filteredName.toLowerCase());
     })
     .map((character) => {
       return (
         <CharacterItem key={character.id} character={character}></CharacterItem>
       );
     });
-  return <ul>{renderList}</ul>;
+  return renderList.length !== 0 ? (
+    <ul>{renderList}</ul>
+  ) : (
+    <p>No hay ningún personaje que se llame {props.filteredName}</p>
+  );
 }
 export default CharacterList;
