@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "./static/css/main.445299fd.css",
-    "main.js": "./static/js/main.2373838d.js",
+    "main.css": "./static/css/main.028905ec.css",
+    "main.js": "./static/js/main.a0453d3b.js",
     "static/media/rick_and_morty_png_by_lalingla_db72d4x-fullview.png": "./static/media/rick_and_morty_png_by_lalingla_db72d4x-fullview.02cd819d63ba6349a2fd.png",
     "static/media/png": "./static/media/4ea7fb833c63a4ea0b0fb696c5919dd7.0b67f17f884934a7d503.png",
     "static/media/logotransparente.png": "./static/media/logotransparente.11d41cdd2a310a86e5c1.png",
     "static/media/desktop-wallpaper-rick-and-morty-x-mr-meeseeks-mr-meeseeks-aesthetic-thumbnail_preview_rev_1.png": "./static/media/desktop-wallpaper-rick-and-morty-x-mr-meeseeks-mr-meeseeks-aesthetic-thumbnail_preview_rev_1.e1af13a97bef12534db8.png",
     "index.html": "./index.html",
-    "main.445299fd.css.map": "./static/css/main.445299fd.css.map",
-    "main.2373838d.js.map": "./static/js/main.2373838d.js.map"
+    "main.028905ec.css.map": "./static/css/main.028905ec.css.map",
+    "main.a0453d3b.js.map": "./static/js/main.a0453d3b.js.map"
   },
   "entrypoints": [
-    "static/css/main.445299fd.css",
-    "static/js/main.2373838d.js"
+    "static/css/main.028905ec.css",
+    "static/js/main.a0453d3b.js"
   ]
 }
