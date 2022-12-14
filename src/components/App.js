@@ -14,8 +14,8 @@ function App() {
   const [apiList, setApiList] = useState([]);
   const [filteredName, setFilteredName] = useState(ls.get("search", ""));
   const [filteredStatus, setFilteredStatus] = useState("");
-  const [toggleSearch, setToggleSearch] = useState(false);
-
+  const [toggleSearch, setToggleSearch] = useState("");
+  console.log({ toggleSearch });
   useEffect(() => {
     Api().then((data) => {
       setApiList(data);
@@ -28,10 +28,6 @@ function App() {
   };
   const handleStatus = (value) => {
     setFilteredStatus(value);
-  };
-  const handleClick = (e) => {
-    e.preventDefault();
-    setToggleSearch(true);
   };
 
   const findCharacter = (id) => {
@@ -60,13 +56,15 @@ function App() {
                   filteredName={filteredName}
                   handleStatus={handleStatus}
                   filteredStatus={filteredStatus}
-                  ToggleSearch={toggleSearch}
-                  handleClick={handleClick}
+                  toggleSearch={toggleSearch}
+                  setToggleSearch={setToggleSearch}
                 ></Filter>
                 <CharacterList
                   apiList={apiList}
                   filteredName={filteredName}
                   filteredStatus={filteredStatus}
+                  toggleSearch={toggleSearch}
+                  setToggleSearch={setToggleSearch}
                 ></CharacterList>
               </>
             }

@@ -4,7 +4,7 @@ function Header() {
   return (
     <>
       <header className="header">
-        <img src={Logo} className="logo" alt="Logo Rick and Morty" />
+        <img src={Logo} className="logo pulse " alt="Logo Rick and Morty" />
       </header>
     </>
   );
