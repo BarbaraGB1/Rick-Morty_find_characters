@@ -1,0 +1,46 @@
+.back {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  background-color: black;
+  width: 320px;
+  display: flex;
+  justify-content: center;
+  z-index: 30;
+  position: relative;
+}
+
+.articleDetail {
+  width: 310px;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(30, 162, 196);
+  margin-top: 50px;
+  z-index: 30;
+  position: relative;
+  margin-left: 5px;
+  border-radius: 10px;
+  border: solid black 2px;
+}
+.imgDetail {
+  width: 150px;
+  z-index: 30;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.textDetail {
+  line-height: 1.2;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+}
+.nameDetail {
+  font-size: 18px;
+  font-weight: 800;
+  text-decoration-line: underline;
+  color: black;
+}

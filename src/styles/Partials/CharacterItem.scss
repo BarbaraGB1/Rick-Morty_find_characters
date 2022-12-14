@@ -1,7 +1,8 @@
 .list {
   text-decoration: none;
   z-index: 20;
-  margin: 10px 10px 10px 10px;
+  margin: 50px 10px 10px 10px;
+  z-index: 20;
 }
 .link {
   text-decoration: none;
@@ -19,11 +20,17 @@
 }
 .imgList {
   width: 125px;
+  color: rgb(30, 162, 196);
   border-color: rgb(30, 162, 196);
   border: solid 2px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+  text-decoration: none;
 }
+.imgList {
+  cursor: url("../../images/buena\ \(1\).png"), auto;
+}
+
 .fadeOut .text {
   opacity: 2;
   transition: 1s ease;
@@ -46,11 +53,11 @@
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
-.grow {
+.grow .imgList {
   transition: 1s ease;
 }
 
-.grow :hover {
+.grow .imgList:hover {
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);

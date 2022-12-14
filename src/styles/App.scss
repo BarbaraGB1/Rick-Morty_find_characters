@@ -2,10 +2,11 @@
 @import "core/Reset.scss";
 @import "Partials/CharacterItem.scss";
 @import "Partials/CharacterList.scss";
+@import "Partials/CharacterDetails.scss";
 .main {
   position: relative;
   margin: 0;
-  height: 100%;
+  height: 100vh;
   font-weight: 100;
   background: radial-gradient(#0c6e1a, #40e61f);
   -webkit-overflow-y: hidden;
@@ -17,13 +18,20 @@
   -o-animation: fadeIn 1 1s ease-out;
   animation: fadeIn 1 1s ease-out;
 }
+.png {
+  width: 250px;
+  position: relative;
+  margin-top: 250px;
+
+  z-index: 30;
+}
 
 .light {
   position: absolute;
   width: 0px;
   opacity: 0.75;
   background-color: rgb(255, 255, 254);
-  box-shadow: #c3f830 0px 0px 20px 2px;
+  box-shadow: #fdfdfd 0px 0px 20px 2px;
   opacity: 0;
   top: 100vh;
   bottom: 0px;
