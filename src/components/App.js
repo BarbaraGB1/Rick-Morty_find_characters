@@ -8,7 +8,6 @@ import Header from "./Header";
 import Footer from "./Footer";
 import ls from "../services/LocalStorage";
 import "../styles/App.scss";
-import PNG from "../images/rick_and_morty_png_by_lalingla_db72d4x-fullview.png";
 
 function App() {
   const [apiList, setApiList] = useState([]);
@@ -29,7 +28,12 @@ function App() {
   const handleStatus = (value) => {
     setFilteredStatus(value);
   };
-
+  const handleReset = () => {
+    setFilteredName("");
+    setFilteredStatus("");
+    setToggleSearch("");
+    ls.clear("search");
+  };
   const findCharacter = (id) => {
     return apiList.find((oneMovie) => oneMovie.id === parseInt(id));
   };
@@ -58,6 +62,7 @@ function App() {
                   filteredStatus={filteredStatus}
                   toggleSearch={toggleSearch}
                   setToggleSearch={setToggleSearch}
+                  handleReset={handleReset}
                 ></Filter>
                 <CharacterList
                   apiList={apiList}
@@ -76,7 +81,6 @@ function App() {
             }
           ></Route>
         </Routes>
-        <img src={PNG} alt="Rick and Morty" className="png" />
       </main>
       <Footer></Footer>
     </div>

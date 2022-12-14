@@ -10,7 +10,7 @@ const Filter = (props) => {
   };
 
   return (
-    <>
+    <div className="containForm">
       <form onSubmit={handlesubmit}>
         <FilterName
           handleName={props.handleName}
@@ -25,7 +25,10 @@ const Filter = (props) => {
           handleClick={handleClick}
         ></FilterStatus>
       </form>
-    </>
+      <button className="reset" onClick={props.handleReset}>
+        Resetealo, nena
+      </button>
+    </div>
   );
 };
 export default Filter;

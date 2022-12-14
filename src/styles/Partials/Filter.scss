@@ -1,3 +1,12 @@
-.collapsed {
-  display: none;
+.containForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.reset {
+  display: flex;
+  justify-content: center;
+  width: 150px;
+  margin-left: 90px;
+  margin-top: 10px;
 }
