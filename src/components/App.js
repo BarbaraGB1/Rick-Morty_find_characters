@@ -5,7 +5,7 @@ import CharacterList from "./CharacterList";
 import Filter from "./Filter";
 import CharacterDetail from "./CharacterDetail";
 import Header from "./Header";
-import Footer from "./Footer";
+
 import ls from "../services/LocalStorage";
 import "../styles/App.scss";
 
@@ -82,7 +82,6 @@ function App() {
           ></Route>
         </Routes>
       </main>
-      <Footer></Footer>
     </div>
   );
 }
