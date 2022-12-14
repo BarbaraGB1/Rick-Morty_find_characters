@@ -11,7 +11,7 @@
   margin: 0;
   height: 100vh;
   font-weight: 100;
-  background: radial-gradient(#0c6e1a, #40e61f);
+  background: radial-gradient(#000000, #415cf7);
   -webkit-overflow-y: hidden;
   -moz-overflow-y: hidden;
   -o-overflow-y: hidden;
@@ -26,8 +26,8 @@
   position: absolute;
   width: 0px;
   opacity: 0.75;
-  background-color: rgb(255, 255, 254);
-  box-shadow: #fdfdfd 0px 0px 20px 2px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: #fcfcfc 0px 0px 20px 2px;
   opacity: 0;
   top: 100vh;
   bottom: 0px;

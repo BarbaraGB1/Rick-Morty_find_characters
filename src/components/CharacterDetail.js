@@ -1,7 +1,8 @@
 import { useParams } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import "../styles/Partials/CharacterDetails.scss";
-
+import meseks from "../images/desktop-wallpaper-rick-and-morty-x-mr-meeseeks-mr-meeseeks-aesthetic-thumbnail_preview_rev_1.png";
+import { FiArrowLeft } from "react-icons/fi";
 function CharacterDetail(props) {
   const params = useParams();
   const characterFound = props.findCharacter(params.characterId);
@@ -10,9 +11,9 @@ function CharacterDetail(props) {
   if (characterFound !== undefined) {
     return (
       <>
-        <NavLink to="/" className="back">
+        <NavLink to="/" className=" back">
           {" "}
-          Volver
+          <FiArrowLeft className="arrow"></FiArrowLeft> Ve a por más
         </NavLink>
 
         <article className="articleDetail">
@@ -36,7 +37,15 @@ function CharacterDetail(props) {
       </>
     );
   } else {
-    return <p>este personaje no existe</p>;
+    return (
+      <div className="errorId">
+        <p>Este personaje no existe pero que más da...</p>
+        <img src={meseks} alt="meeseeks" />
+        <NavLink to="/" className="backError">
+          <FiArrowLeft className="arrow"></FiArrowLeft>Intentalo de nuevo
+        </NavLink>
+      </div>
+    );
   }
 }
 export default CharacterDetail;
