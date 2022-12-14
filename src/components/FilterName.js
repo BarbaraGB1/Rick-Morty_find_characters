@@ -1,4 +1,6 @@
 import "../styles/Partials/Filter.scss";
+import "../styles/Partials/FilterName.scss";
+import { FiChevronDown } from "react-icons/fi";
 function FilterName(props) {
   const handlechangeName = (ev) => {
     props.handleName(ev.target.value);
@@ -10,12 +12,17 @@ function FilterName(props) {
   return (
     <>
       <fieldset>
-        <div id="searchName" onClick={handleClickID}>
-          <h2>Buscar por nombre</h2>
+        <div id="searchName" onClick={handleClickID} className="containName">
+          <FiChevronDown></FiChevronDown>{" "}
+          <h2>Que crack, te acuerdas del nombre</h2>
+          <FiChevronDown></FiChevronDown>
         </div>
-        <div className={props.toggleSearch === "searchName" ? "" : "collapsed"}>
+        <div
+          className={`inputName ${
+            props.toggleSearch === "searchName" ? "" : "collapsed"
+          }`}
+        >
           <label htmlFor="name">
-            Encuentra por nombre
             <input
               type="text"
               placeholder="Ejemplo:Morty Smith"
@@ -23,6 +30,7 @@ function FilterName(props) {
               name="name"
               onChange={handlechangeName}
               value={props.filteredName}
+              className="searchName"
             />
           </label>
         </div>

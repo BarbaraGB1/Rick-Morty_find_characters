@@ -1,5 +1,5 @@
 import "../styles/Partials/Header.scss";
-import Logo from "../images/Rick-And-Morty-Logo-Transparent-File.png";
+import Logo from "../images/logotransparente.png";
 function Header() {
   return (
     <>

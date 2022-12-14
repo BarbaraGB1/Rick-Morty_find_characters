@@ -1,0 +1,33 @@
+.containName {
+  background-color: rgb(22, 65, 131);
+  position: relative;
+  z-index: 20;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Zen Dots";
+  font-size: 13px;
+  height: 30px;
+}
+.inputName {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border: solid 2px rgb(125, 137, 189);
+  position: relative;
+  z-index: 20;
+}
+.searchName {
+  color: rgb(252, 252, 252);
+  background-color: white;
+  font-family: "Kenia", cursive;
+  position: relative;
+  z-index: 20;
+  border: solid 2px rgb(172, 172, 211);
+}
+.collapsed {
+  display: none;
+}
