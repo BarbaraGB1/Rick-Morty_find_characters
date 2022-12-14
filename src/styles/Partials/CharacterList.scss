@@ -4,24 +4,3 @@
   flex-wrap: wrap;
   justify-content: center;
 }
-.containError {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: black;
-  border-radius: 600px;
-}
-.png {
-  width: 300px;
-  height: 300px;
-
-  position: relative;
-  margin-left: 10px;
-  z-index: 30;
-}
-
-.errorMesage {
-  margin-left: 10px;
-  position: relative;
-  color: white;
-}

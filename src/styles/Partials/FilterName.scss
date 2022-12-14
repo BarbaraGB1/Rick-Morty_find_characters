@@ -1,5 +1,5 @@
 .containName {
-  background-color: rgb(22, 65, 131);
+  background-color: rgb(0, 0, 0);
   position: relative;
   z-index: 20;
   color: white;
@@ -9,6 +9,9 @@
   font-family: "Zen Dots";
   font-size: 13px;
   height: 30px;
+  width: 320px;
+  border: solid 2px rgb(63, 63, 206);
+  cursor: pointer;
 }
 .inputName {
   height: 50px;
@@ -30,4 +33,34 @@
 }
 .collapsed {
   display: none;
+}
+@media all and (min-width: 768px) {
+  .containName {
+    font-size: 16px;
+    height: 40px;
+    width: 768px;
+  }
+  .inputName {
+    height: 70px;
+  }
+  .searchName {
+    width: 200px;
+    height: 25px;
+    font-size: 16px;
+  }
+}
+@media all and (min-width: 1200px) {
+  .containName {
+    font-size: 18px;
+    height: 45px;
+    width: 1200px;
+  }
+  .inputName {
+    height: 75px;
+  }
+  .searchName {
+    width: 400px;
+    height: 30px;
+    font-size: 20px;
+  }
 }

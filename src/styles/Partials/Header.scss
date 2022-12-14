@@ -27,3 +27,46 @@
     width: 100px;
   }
 }
+
+@media all and (min-width: 768px) {
+  .header {
+    height: 400px;
+    background-size: 900px 400px;
+  }
+  .logo {
+    width: 300px;
+    top: 30%;
+  }
+  @keyframes pulse-animation {
+    0% {
+      width: 300px;
+    }
+    100% {
+      width: 500px;
+    }
+    0% {
+      width: 300px;
+    }
+  }
+}
+@media all and (min-width: 1200px) {
+  .header {
+    height: 420px;
+    background-size: 994px 420px;
+  }
+  .logo {
+    width: 350px;
+    top: 28%;
+  }
+  @keyframes pulse-animation {
+    0% {
+      width: 350px;
+    }
+    100% {
+      width: 550px;
+    }
+    0% {
+      width: 350px;
+    }
+  }
+}

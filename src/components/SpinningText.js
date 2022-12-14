@@ -3,22 +3,24 @@ function SpinningText({ text, children }) {
   const deg = 360 / lenght;
 
   return (
-    <div className="spinning-text-wrapper">
-      <div className="spinning-text">
-        <p>
-          {text.split("").map((letra, i) => (
-            <span
-              key={i}
-              style={{
-                transform: `rotate(${deg * i}deg)`,
-              }}
-            >
-              {letra}
-            </span>
-          ))}
-        </p>
+    <div className="containSipin">
+      <div className="spinning-text-wrapper">
+        <div className="spinning-text">
+          <p>
+            {text.split("").map((letra, i) => (
+              <span
+                key={i}
+                style={{
+                  transform: `rotate(${deg * i}deg)`,
+                }}
+              >
+                {letra}
+              </span>
+            ))}
+          </p>
+        </div>
+        {children}
       </div>
-      {children}
     </div>
   );
 }

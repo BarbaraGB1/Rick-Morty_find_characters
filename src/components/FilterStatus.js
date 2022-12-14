@@ -32,9 +32,15 @@ function FilterStatus(props) {
               value={props.filteredStatus}
               className="searchstatus"
             >
-              <option value="">Estado</option>
-              <option value="Alive">Vivo</option>
-              <option value="Dead">Muerto</option>
+              <option value="" className="searchstatus">
+                Estado
+              </option>
+              <option value="Alive" className="searchstatus">
+                Vivo
+              </option>
+              <option value="Dead" className="searchstatus">
+                Muerto
+              </option>
             </select>
           </label>
         </div>
