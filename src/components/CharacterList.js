@@ -13,6 +13,11 @@ function CharacterList(props) {
       (character) =>
         props.filteredStatus === "" || character.status === props.filteredStatus
     )
+    .filter((character) => {
+      return character.planet
+        .toLowerCase()
+        .includes(props.filteredPlanet.toLowerCase());
+    })
 
     .map((character) => {
       return (

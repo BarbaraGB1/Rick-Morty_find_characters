@@ -13,6 +13,7 @@ function App() {
   const [apiList, setApiList] = useState([]);
   const [filteredName, setFilteredName] = useState(ls.get("search", ""));
   const [filteredStatus, setFilteredStatus] = useState("");
+  const [filteredPlanet, setFilteredPlanet] = useState("");
   const [toggleSearch, setToggleSearch] = useState("");
   console.log({ toggleSearch });
   useEffect(() => {
@@ -27,6 +28,9 @@ function App() {
   };
   const handleStatus = (value) => {
     setFilteredStatus(value);
+  };
+  const handlePlanet = (value) => {
+    setFilteredPlanet(value);
   };
   const handleReset = () => {
     setFilteredName("");
@@ -63,6 +67,8 @@ function App() {
                   toggleSearch={toggleSearch}
                   setToggleSearch={setToggleSearch}
                   handleReset={handleReset}
+                  filteredPlanet={filteredPlanet}
+                  handlePlanet={handlePlanet}
                 ></Filter>
                 <CharacterList
                   apiList={apiList}
@@ -70,6 +76,7 @@ function App() {
                   filteredStatus={filteredStatus}
                   toggleSearch={toggleSearch}
                   setToggleSearch={setToggleSearch}
+                  filteredPlanet={filteredPlanet}
                 ></CharacterList>
               </>
             }

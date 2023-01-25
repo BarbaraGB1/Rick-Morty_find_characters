@@ -1,5 +1,6 @@
 import FilterName from "./FilterName";
 import FilterStatus from "./FilterStatus";
+
 import "../styles/Partials/Filter.scss";
 const Filter = (props) => {
   const handlesubmit = (event) => {
